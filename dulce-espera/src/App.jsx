@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import '.Estilos/estilosGaleria.css'
+import './Estilos/estilosGaleria.css'
 
 function BarraDeBusqueda() {
   const [query, setQuery] = useState('');
@@ -29,7 +29,7 @@ function Galeria({ paisajes }) {
     const paisajesFiltrados = paisajes.filter((paisaje) =>
       paisaje.nombre.toLowerCase().includes(busqueda.toLowerCase())
     );
-    setFotos(paisajesFiltrados); // Actualiza el estado con los paisajes filtrados
+    setFotos(paisajesFiltrados);
   };
 
   return (
