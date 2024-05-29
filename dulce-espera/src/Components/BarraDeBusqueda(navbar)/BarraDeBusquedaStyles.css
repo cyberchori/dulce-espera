@@ -1,0 +1,14 @@
+.barra-de-busqueda-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.barra-de-busqueda-input {
+  width: 80%; /* Ajusta el ancho del input */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde sencillo */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}

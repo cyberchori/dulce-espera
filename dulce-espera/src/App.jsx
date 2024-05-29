@@ -2,53 +2,6 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './Estilos/estilosGaleria.css'
-
-function BarraDeBusqueda() {
-  const [query, setQuery] = useState('');
-
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  return (
-    <input
-      type="search"
-      placeholder="Buscar..."
-      value={query}
-      onChange={handleInputChange}
-    />
-  );
-}
-
-function Galeria({ paisajes }) {
-  const [busqueda, setBusqueda] = useState("");
-  const [fotos, setFotos] = useState(paisajes);
-
-  const filtrarPaisajes = () => {
-    const paisajesFiltrados = paisajes.filter((paisaje) =>
-      paisaje.nombre.toLowerCase().includes(busqueda.toLowerCase())
-    );
-    setFotos(paisajesFiltrados);
-  };
-
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Buscar por nombre..."
-        value={busqueda}
-        onChange={(e) => setBusqueda(e.target.value)}
-      />
-      <button onClick={filtrarPaisajes}>Buscar</button>
-      <div className="galeria-container">
-        {fotos.map((paisaje, index) => (
-          <img key={index} src={paisaje.url} alt={paisaje.nombre} />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function App() {
   const [count, setCount] = useState(0)
