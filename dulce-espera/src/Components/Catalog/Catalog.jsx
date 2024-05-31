@@ -1,10 +1,10 @@
-import './PhotoGallery.css';
-
-const PhotoGallery = ({ photos }) => {
+import "./PhotoGallery.css"
+const PhotoGallery = ({ photos, onFilterChange }) => {
   return (
     <div className="photo-gallery">
+      <FilterPhotos photos={photos} filterByCategory={onFilterChange} />
       <ul className="photo-list">
-        {photos.map((photo, index) => (
+        {photos.filter(photo => photo.category === categoryFilter).map((photo, index) => (
           <li key={index} className="photo-item">
             <img src={photo.src} alt={`Foto ${index}`} className="photo" />
           </li>
@@ -14,4 +14,4 @@ const PhotoGallery = ({ photos }) => {
   );
 };
 
-export default PhotoGallery;
+export default PhotoGallery
