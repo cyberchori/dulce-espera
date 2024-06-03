@@ -22,7 +22,19 @@ import "./App.css";
  * 2) Extrae cada componente en su propio componente, creando su archivo en la carpeta components, exportandolos e importandolos aqui
  */
 function App() {
-  return <></>;
+  return (
+<div>
+<div style={{ backgroundColor: 'red', padding: 'flex', borderRadius: '4px' ,display:'flex', height: '40px', gap: '20px' }}>navbar</div> 
+<div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px' ,display:'flex',height: '200px' }}>carusel</div> 
+<div style={{ display: 'flex', flexDirection: 'row'}}>
+        <div style={{ width:'15%', height: '700px', backgroundColor: 'lightblue', marginRight: '10px',borderRadius: '4px' }}>filter</div>
+        <div style={{ width: '85%', height: '700px', backgroundColor: 'lightgreen', padding: 'flex', marginRight: '10px',borderRadius: '4px' }}>catalogue</div>
+      </div>
+      
+    
+</div>
+
+  )
 }
 
 export default App;
