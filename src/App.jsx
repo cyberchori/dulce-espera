@@ -22,19 +22,40 @@ import "./App.css";
  * 2) Extrae cada componente en su propio componente, creando su archivo en la carpeta components, exportandolos e importandolos aqui
  */
 function App() {
-  return (
-<div>
-<div style={{ backgroundColor: 'red', padding: 'flex', borderRadius: '2px' ,display:'flex', height: '2.5rem' }}>navbar</div> 
-<div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px' ,display:'flex',height: '15rem' }}>carusel</div> 
-<div style={{ display: 'flex', flexDirection: 'row'}}>
-        <div style={{ minwidth:'5rem', width:'10rem', height: '40rem', backgroundColor: 'lightblue', marginRight: '10px',borderRadius: '4px',padding:'flex' }}>filter</div>
-        <div style={{ width: '85%', height: '40rem', backgroundColor: 'lightgreen', padding: 'flex', marginRight: '10px',borderRadius: '4px' }}>catalogue</div>
-      </div>
-      
-    
-</div>
+  const Navbar = () => {
+    return (
+      <div style={{ backgroundColor: 'red', padding: 'flex', borderRadius: '2px', display: 'flex', height: '2.5rem' }}>navbar</div>
+    );
+  };
 
-  )
+  const Carusel = () => {
+    return (
+      <div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px', display: 'flex', height: '15rem' }}>carusel</div>
+    );
+  };
+
+  const Filter = () => {
+    return (
+      <div style={{ minWidth: '5rem', width: '10rem', height: '40rem', backgroundColor: 'lightblue', marginRight: '10px', borderRadius: '4px', padding: 'flex' }}>filter</div>
+    );
+  };
+
+  const Catalogue = () => {
+    return (
+      <div style={{ width: '85%', height: '40rem', backgroundColor: 'lightgreen', padding: 'flex', marginRight: '10px', borderRadius: '4px' }}>catalogue</div>
+    );
+  };
+
+  return (
+    <>
+      <Navbar />
+      <Carusel />
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <Filter />
+        <Catalogue />
+      </div>
+    </>
+  );
 }
 
 export default App;
