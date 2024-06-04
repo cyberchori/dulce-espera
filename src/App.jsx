@@ -24,11 +24,11 @@ import "./App.css";
 function App() {
   return (
 <div>
-<div style={{ backgroundColor: 'red', padding: 'flex', borderRadius: '4px' ,display:'flex', height: '40px', gap: '20px' }}>navbar</div> 
-<div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px' ,display:'flex',height: '200px' }}>carusel</div> 
+<div style={{ backgroundColor: 'red', padding: 'flex', borderRadius: '2px' ,display:'flex', height: '2.5rem' }}>navbar</div> 
+<div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px' ,display:'flex',height: '15rem' }}>carusel</div> 
 <div style={{ display: 'flex', flexDirection: 'row'}}>
-        <div style={{ width:'15%', height: '700px', backgroundColor: 'lightblue', marginRight: '10px',borderRadius: '4px' }}>filter</div>
-        <div style={{ width: '85%', height: '700px', backgroundColor: 'lightgreen', padding: 'flex', marginRight: '10px',borderRadius: '4px' }}>catalogue</div>
+        <div style={{ minwidth:'5rem', width:'10rem', height: '40rem', backgroundColor: 'lightblue', marginRight: '10px',borderRadius: '4px',padding:'flex' }}>filter</div>
+        <div style={{ width: '85%', height: '40rem', backgroundColor: 'lightgreen', padding: 'flex', marginRight: '10px',borderRadius: '4px' }}>catalogue</div>
       </div>
       
     
