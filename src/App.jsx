@@ -1,3 +1,4 @@
+import { useState ,  } from "react";
 import "./App.css";
 
 /**
@@ -34,7 +35,7 @@ function App() {
         <button style={{ backgroundColor: 'white', border: 'none', borderRadius: '2rem', padding: '0.3rem 0.2rem' }}>button 1</button>
         <button style={{ backgroundColor: 'white', border: 'none', borderRadius: '2rem', padding: '0.3rem 0.2rem' }}>button 2</button>
         <button style={{ backgroundColor: 'white', border: 'none', borderRadius: '2rem', padding: '0.3rem 0.2rem' }}>USUARIO</button>
-        <button style={{ backgroundColor: 'white', border: 'none', borderRadius: '2rem', padding: '0.3rem 0.2rem' }}>Compras</button>
+        <button style={{ backgroundColor: 'white', border: 'none', borderRadius: '2rem', padding: '0.1rem 0.1rem' }}>Compras</button>
       </div>
       </div>
       
@@ -42,8 +43,30 @@ function App() {
   };
 
   const Carusel = () => {
+    const [images] = useState([
+      'https://ibb.co/BGj0hDB',
+      'https://ibb.co/XZVyzdF',
+      'https://ibb.co/VNMBwHH',
+      'https://ibb.co/w7t8mqS',
+      'https://ibb.co/PGDCHYB',
+      'https://ibb.co/mJtb6C3',
+      'https://ibb.co/TLsDKm0',
+    ]);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const imageLength = images.length;
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageLength);
+        }, 10000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-      <div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px', display: 'flex', height: '15rem' }}>carusel</div>
+        <div style={{ backgroundColor: 'yellow', padding: 'flex', borderRadius: '4px', display: 'flex', height: '15rem' }}>
+            <img src={images[currentImageIndex]} alt={`Imagen ${currentImageIndex + 1}`} style={{ margin: '10px' }} />
+        </div>
     );
   };
 
