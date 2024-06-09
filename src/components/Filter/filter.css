@@ -1,0 +1,17 @@
+.filter {
+    min-width: 5rem;
+    width: 10rem;
+    height: 40rem;
+    background-color: lightblue;
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 1rem;
+    position: absolute; 
+    left: 0;
+    top: 0;
+    display: none; 
+  }
+  
+  .show {
+    display: block; 
+  }
